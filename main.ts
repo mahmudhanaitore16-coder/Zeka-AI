@@ -1,15 +1,13 @@
-// Zeka AI - Зерделі ассистент
+
 Deno.serve(async (req) => {
   const url = new URL(req.url);
   
-  // CORS заголовкалары (HTML-ден сұрау келу үшін)
   const corsHeaders = {
     "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
   };
   
-  // OPTIONS сұрауына жауап (браузер алдын ала тексереді)
   if (req.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
