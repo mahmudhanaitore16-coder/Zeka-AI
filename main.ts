@@ -1,4 +1,3 @@
-
 Deno.serve(async (req) => {
   const url = new URL(req.url);
   
